@@ -994,6 +994,27 @@
       align-items: center;
       justify-content: center;
       gap: 7px;
+      position: relative;
+    }
+
+    /* Contrapeso invisible en el lado izquierdo para el corazón de Luz Amanda */
+    .name-with-icon::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      margin-right: -7px;
+      pointer-events: none;
+    }
+
+    .blessing .halo {
+      font-size: 0.86rem;
+      color: var(--lavender-deep);
+      font-style: italic;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 3px;
     }
 
     .angelic-icon {
@@ -1389,55 +1410,40 @@
               </svg>
             </span>
           </div>
-          <span class="halo">quien nos acompaña desde el cielo</span>
+          <span class="halo">Quien nos acompaña desde el cielo</span>
         </div>
 
         <div class="who reveal">
           <div class="role">Hijo</div>
-          <div class="name name-with-icon">
-            Emilio Riaño Garzón
+          <div class="name">Emilio Riaño Garzón</div>
+          <span class="halo">
             <span class="angelic-icon wings-icon" title="En memoria de Emilio"
               aria-label="Alas angelicales con aureola celestial">
-              <svg viewBox="0 0 46 26" width="30" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Aureola celestial superior flotante -->
-                <ellipse cx="23" cy="4" rx="6.8" ry="2.1" stroke="#BF9B4F" stroke-width="1"
-                  fill="rgba(251,247,238,0.3)" />
+              <svg viewBox="0 0 46 26" width="28" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Aureola celestial superior flotante con fondo blanco y borde dorado -->
+                <ellipse cx="23" cy="4" rx="6.8" ry="2.2" stroke="#BF9B4F" stroke-width="1.1" fill="#FFFFFF" />
 
-                <!-- ALA IZQUIERDA -->
-                <!-- Pluma superior larga -->
-                <path d="M18.5 13.5 C17 8.5, 9.5 5.2, 2.5 5.5 C1.5 6.8, 2 8.5, 4 9.2 C9 11, 14 13.5, 17 15.5"
-                  stroke="#BF9B4F" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round" />
-                <!-- Pluma intermedia -->
-                <path d="M4 9.2 C2.5 10.8, 3.2 12.8, 5 13.4 C9.5 14.8, 13.5 16.5, 16 18" stroke="#BF9B4F"
-                  stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
-                <!-- Pluma inferior -->
-                <path d="M5.2 13.4 C4 15, 5 17.2, 7 17.6 C10.5 18.2, 13.5 18.6, 15.5 18.8" stroke="#BF9B4F"
-                  stroke-width="0.95" stroke-linecap="round" stroke-linejoin="round" />
-                <!-- Trazos interiores de plumas -->
-                <path d="M16 11.5 C12.5 10, 8 9.5, 5.5 10.5" stroke="#D4AF37" stroke-width="0.75"
-                  stroke-linecap="round" />
-                <path d="M14.5 14.5 C11.5 13.8, 8.5 14, 6.8 14.8" stroke="#D4AF37" stroke-width="0.7"
-                  stroke-linecap="round" />
+                <!-- ALA IZQUIERDA: Silueta completa con fondo blanco puro y borde dorado -->
+                <path d="M18.5 13.5 C17 8.5, 9.5 5.2, 2.5 5.5 C1.5 6.8, 2 8.5, 4 9.2 C2.5 10.8, 3.2 12.8, 5 13.4 C4 15, 5 17.2, 7 17.6 C10.5 18.2, 13.5 18.6, 15.5 18.8 C17.2 17.5, 18.5 15.5, 18.5 13.5 Z"
+                  fill="#FFFFFF" stroke="#BF9B4F" stroke-width="1.1" stroke-linejoin="round" />
+                <!-- Detalle de plumas interiores ala izquierda -->
+                <path d="M4 9.2 C9 11, 14 13.5, 17 15.5" stroke="#BF9B4F" stroke-width="0.9" stroke-linecap="round" />
+                <path d="M5 13.4 C9.5 14.8, 13.5 16.5, 16 18" stroke="#BF9B4F" stroke-width="0.85" stroke-linecap="round" />
+                <path d="M16 11.5 C12.5 10, 8 9.5, 5.5 10.5" stroke="#BF9B4F" stroke-width="0.75" stroke-linecap="round" />
+                <path d="M14.5 14.5 C11.5 13.8, 8.5 14, 6.8 14.8" stroke="#BF9B4F" stroke-width="0.7" stroke-linecap="round" />
 
-                <!-- ALA DERECHA -->
-                <!-- Pluma superior larga -->
-                <path d="M27.5 13.5 C29 8.5, 36.5 5.2, 43.5 5.5 C44.5 6.8, 44 8.5, 42 9.2 C37 11, 32 13.5, 29 15.5"
-                  stroke="#BF9B4F" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round" />
-                <!-- Pluma intermedia -->
-                <path d="M42 9.2 C43.5 10.8, 42.8 12.8, 41 13.4 C36.5 14.8, 32.5 16.5, 30 18" stroke="#BF9B4F"
-                  stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
-                <!-- Pluma inferior -->
-                <path d="M40.8 13.4 C42 15, 41 17.2, 39 17.6 C35.5 18.2, 32.5 18.6, 30.5 18.8" stroke="#BF9B4F"
-                  stroke-width="0.95" stroke-linecap="round" stroke-linejoin="round" />
-                <!-- Trazos interiores de plumas -->
-                <path d="M30 11.5 C33.5 10, 38 9.5, 40.5 10.5" stroke="#D4AF37" stroke-width="0.7"
-                  stroke-linecap="round" />
-                <path d="M31.5 14.5 C34.5 13.8, 37.5 14, 39.2 14.8" stroke="#D4AF37" stroke-width="0.7"
-                  stroke-linecap="round" />
+                <!-- ALA DERECHA: Silueta completa con fondo blanco puro y borde dorado -->
+                <path d="M27.5 13.5 C29 8.5, 36.5 5.2, 43.5 5.5 C44.5 6.8, 44 8.5, 42 9.2 C43.5 10.8, 42.8 12.8, 41 13.4 C42 15, 41 17.2, 39 17.6 C35.5 18.2, 32.5 18.6, 30.5 18.8 C28.8 17.5, 27.5 15.5, 27.5 13.5 Z"
+                  fill="#FFFFFF" stroke="#BF9B4F" stroke-width="1.1" stroke-linejoin="round" />
+                <!-- Detalle de plumas interiores ala derecha -->
+                <path d="M42 9.2 C37 11, 32 13.5, 29 15.5" stroke="#BF9B4F" stroke-width="0.9" stroke-linecap="round" />
+                <path d="M41 13.4 C36.5 14.8, 32.5 16.5, 30 18" stroke="#BF9B4F" stroke-width="0.85" stroke-linecap="round" />
+                <path d="M30 11.5 C33.5 10, 38 9.5, 40.5 10.5" stroke="#BF9B4F" stroke-width="0.75" stroke-linecap="round" />
+                <path d="M31.5 14.5 C34.5 13.8, 37.5 14, 39.2 14.8" stroke="#BF9B4F" stroke-width="0.7" stroke-linecap="round" />
               </svg>
             </span>
-          </div>
-          <span class="halo">bendiciéndonos desde el cielo</span>
+            Bendiciéndonos desde el cielo
+          </span>
         </div>
       </div>
     </section>
@@ -1718,9 +1724,9 @@
         bgAudio.pause();
         updateMusicUI(false);
       } else {
-        bgAudio.play().then(function() {
+        bgAudio.play().then(function () {
           updateMusicUI(true);
-        }).catch(function(err) {
+        }).catch(function (err) {
           console.log('Interacción requerida para reproducir audio:', err);
         });
       }
@@ -1730,12 +1736,12 @@
 
     // Iniciar suavemente la canción al abrir la invitación (interacción de usuario permitida por el navegador)
     const originalOpenInvite = openInvite;
-    openInvite = function() {
+    openInvite = function () {
       originalOpenInvite();
       if (!isPlaying) {
-        bgAudio.play().then(function() {
+        bgAudio.play().then(function () {
           updateMusicUI(true);
-        }).catch(function() {
+        }).catch(function () {
           // El usuario siempre podrá activarla con el botón flotante
         });
       }
